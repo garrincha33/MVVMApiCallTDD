@@ -21,7 +21,7 @@ final class MVVMModelTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        userModel = UserModel(id: 1, name: "test", email: "test", userName: "test")
+        userModel = UserModel(id: 1, name: "test", username: "test", email: "test")
     }
     
     override func tearDown() {
@@ -35,11 +35,11 @@ final class MVVMModelTests: XCTestCase {
         let email = "test"
         let userName = "test"
     
-        let newUser = UserModel(id: 1, name: "test", email: "test", userName: "test")
+        let newUser = UserModel(id: 1, name: "test", username: "test", email: "test")
         
         XCTAssertEqual(newUser.id, id)
         XCTAssertEqual(newUser.name, name)
-        XCTAssertEqual(newUser.userName, userName)
+        XCTAssertEqual(newUser.username, userName)
         XCTAssertEqual(newUser.email, email)
     }
 }

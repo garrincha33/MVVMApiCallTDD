@@ -9,8 +9,8 @@ import Foundation
 
 class UserService {
     func fetchUsers(completion: @escaping ([UserModel]?) -> Void) {
-        let url = URL(string: "")!
-        URLSession.shared.dataTask(with: url) {(data, _, error) in
+        let url = URL(string: "https://jsonplaceholder.typicode.com/users")!
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let error = error {
                 print(error.localizedDescription)
                 completion(nil)
@@ -19,9 +19,9 @@ class UserService {
                 completion(nil)
                 return
             }
-            
             let users = try? JSONDecoder().decode([UserModel].self, from: data)
             completion(users)
         }
+        .resume()
     }
 }
