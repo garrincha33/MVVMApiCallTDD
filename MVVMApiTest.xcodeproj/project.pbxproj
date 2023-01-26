@@ -17,6 +17,7 @@
 		8245A0FC2982A78800A955A4 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0FB2982A78800A955A4 /* UserModel.swift */; };
 		8245A0FE2982C7B400A955A4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0FD2982C7B400A955A4 /* UserViewModel.swift */; };
 		8245A1012982C7D500A955A4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A1002982C7D500A955A4 /* UserService.swift */; };
+		8245A1032982C87900A955A4 /* MVVMUserTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A1022982C87900A955A4 /* MVVMUserTableViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		8245A0FB2982A78800A955A4 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8245A0FD2982C7B400A955A4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		8245A1002982C7D500A955A4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		8245A1022982C87900A955A4 /* MVVMUserTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMUserTableViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				8245A0F42982A5E100A955A4 /* MVVMModelTests.swift */,
 				8245A0F92982A75D00A955A4 /* MVVMViewModelTests.swift */,
+				8245A1022982C87900A955A4 /* MVVMUserTableViewControllerTests.swift */,
 			);
 			path = MVVMApiTestTests;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8245A0F52982A5E100A955A4 /* MVVMModelTests.swift in Sources */,
+				8245A1032982C87900A955A4 /* MVVMUserTableViewControllerTests.swift in Sources */,
 				8245A0FA2982A75D00A955A4 /* MVVMViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
