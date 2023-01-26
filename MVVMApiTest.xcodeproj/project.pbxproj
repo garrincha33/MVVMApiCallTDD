@@ -15,6 +15,8 @@
 		8245A0F52982A5E100A955A4 /* MVVMModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0F42982A5E100A955A4 /* MVVMModelTests.swift */; };
 		8245A0FA2982A75D00A955A4 /* MVVMViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0F92982A75D00A955A4 /* MVVMViewModelTests.swift */; };
 		8245A0FC2982A78800A955A4 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0FB2982A78800A955A4 /* UserModel.swift */; };
+		8245A0FE2982C7B400A955A4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0FD2982C7B400A955A4 /* UserViewModel.swift */; };
+		8245A1012982C7D500A955A4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A1002982C7D500A955A4 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		8245A0F42982A5E100A955A4 /* MVVMModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMModelTests.swift; sourceTree = "<group>"; };
 		8245A0F92982A75D00A955A4 /* MVVMViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewModelTests.swift; sourceTree = "<group>"; };
 		8245A0FB2982A78800A955A4 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8245A0FD2982C7B400A955A4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		8245A1002982C7D500A955A4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		8245A0D22982A58E00A955A4 /* MVVMApiTest */ = {
 			isa = PBXGroup;
 			children = (
+				8245A0FF2982C7CC00A955A4 /* Service */,
 				8245A0F82982A70C00A955A4 /* Controller */,
 				8245A0F72982A70500A955A4 /* ViewModel */,
 				8245A0F62982A6FE00A955A4 /* Model */,
@@ -113,6 +118,7 @@
 		8245A0F72982A70500A955A4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8245A0FD2982C7B400A955A4 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -122,6 +128,14 @@
 			children = (
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8245A0FF2982C7CC00A955A4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8245A1002982C7D500A955A4 /* UserService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +240,9 @@
 			files = (
 				8245A0D82982A58E00A955A4 /* ViewController.swift in Sources */,
 				8245A0D42982A58E00A955A4 /* AppDelegate.swift in Sources */,
+				8245A1012982C7D500A955A4 /* UserService.swift in Sources */,
 				8245A0FC2982A78800A955A4 /* UserModel.swift in Sources */,
+				8245A0FE2982C7B400A955A4 /* UserViewModel.swift in Sources */,
 				8245A0D62982A58E00A955A4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

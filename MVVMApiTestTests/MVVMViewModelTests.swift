@@ -16,7 +16,7 @@ final class MVVMViewModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         userModel = UserModel(id: 1, name: "test", email: "test", userName: "test")
-        viewModel = UserViewModel(users: [userModel])
+        viewModel = UserViewModel(userService: UserService.init())
     }
     
     override func tearDown() {
@@ -26,35 +26,44 @@ final class MVVMViewModelTests: XCTestCase {
     }
     
     func testForUsersFromUserModel() {
-        let user = [UserModel(id: 1, name: "test", email: "test@example.com", userName: "test")]
-        viewModel = UserViewModel(users: user)
+        viewModel = UserViewModel(userService: UserService.init())
         let users = viewModel.users
         XCTAssertNotNil(users)
     }
     
     func testReturnUserCount() {
-        let user1 = [UserModel(id: 1, name: "test", email: "test", userName: "test")]
-        let expectedCount = 1
-        viewModel = UserViewModel(users: user1)
-        
+        viewModel = UserViewModel(userService: UserService.init())
+        let expectedCount = 0
         XCTAssertEqual(expectedCount, viewModel.count)
     }
     
+    func testForServiceInstantiation() {
+        let service = viewModel.userService
+        XCTAssertNotNil(service)
+    }
+    
+    func testForUsersFromApiinViewModel() {
+        let userService = UserServiceMock()
+        let viewModel = (userService)
+        var users: [UserModel]?
+        
+        viewModel.fetchUsers {(user) in
+            users = users
+        }
+        
+        XCTAssertNil(users)
+    }
     
     
 }
 
-struct UserViewModel {
-    var users: [UserModel] = []
-    
-    var count: Int {
-        return users.count
+class UserServiceMock {
+    let users: [UserModel] = []
+    func fetchUsers(completion: @escaping ([UserModel]?) -> Void) {
+        completion(users)
     }
-    
-    func user(at index: Int) -> UserModel {
-        return users[index]
-    }
-    
 }
+
+
 
 
