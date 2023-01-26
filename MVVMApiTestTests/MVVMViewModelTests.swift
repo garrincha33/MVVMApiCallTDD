@@ -39,6 +39,9 @@ final class MVVMViewModelTests: XCTestCase {
         
         XCTAssertEqual(expectedCount, viewModel.count)
     }
+    
+    
+    
 }
 
 struct UserViewModel {
@@ -46,6 +49,10 @@ struct UserViewModel {
     
     var count: Int {
         return users.count
+    }
+    
+    func user(at index: Int) -> UserModel {
+        return users[index]
     }
     
 }
