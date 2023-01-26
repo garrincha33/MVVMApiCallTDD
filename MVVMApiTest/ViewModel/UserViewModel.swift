@@ -7,25 +7,28 @@
 import Foundation
 
 class UserViewModel {
-    let userService: UserService
-    
-    init(userService: UserService) {
-        self.userService = userService
-    }
+    private let userService: UserService
     
     var users: [UserModel] = []
-    
     var count: Int {
         return users.count
     }
     
     func user(at index: Int) -> UserModel {
+        print(users.count)
         return users[index]
+        
+    }
+
+    init(userService: UserService) {
+        self.userService = userService
     }
     
-    func fetchUsers(completion: @escaping ([UserModel]?) -> Void) {
+    func fetchNewUsers(completion: @escaping ([UserModel]?) -> Void) {
         userService.fetchUsers { (users) in
+            self.users = users ?? []
             completion(users)
         }
     }
 }
+
